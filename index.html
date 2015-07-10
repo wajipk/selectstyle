@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Pakipreneurs"/>
+<meta name="author" content="Pakipreneurs"/>
+<meta name="keywords" content="select,jquery"/>
+<meta name="description" content="Selector plug that made select tag in to custome select style"/>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<title>Customize Your Select</title>
+
+<link href="assets/style.css" rel="stylesheet" type="text/css"/>
+<link href="assets/selectstyle.css" rel="stylesheet" type="text/css"/>
+
+<script src="assets/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="assets/modernizr.custom.js" type="text/javascript"></script>
+<script src="assets/selectstyle.js" type="text/javascript"></script>
+
+</head>
+<body>
+<section class="google">
+	<h1>Google Theme</h1>
+	<select theme="google" width="250" style="" placeholder="Select Your Favorite" data-search="true">
+		<option>E-Mail</option>
+		<option>Facebook</option>
+		<option>Twitter</option>
+		<option>Lined-in</option>
+		<option>Google Plus</option>
+		<option>My Space</option>
+		<option>Themeforest</option>
+		<option>Codecanyon</option>
+		<option>Videohive</option>
+		<option>Audiojungle</option>
+		<option>Graphicriver</option>
+		<option>Photodun</option>
+		<option>3Docean</option>
+	</select>
+	<p>
+		This is google theme of select style. You just need to write google in theme option. This is also basic theme
+	</p>
+</section>
+<section class="dark">
+	<h1>Dark Theme</h1>
+	<select theme="dark" width="250" style="" placeholder="Select Your Favorite" data-search="true">
+		<option>E-Mail</option>
+		<option>Facebook</option>
+		<option>Twitter</option>
+		<option>Lined-in</option>
+		<option>Google Plus</option>
+		<option>My Space</option>
+		<option>Themeforest</option>
+		<option>Codecanyon</option>
+		<option>Videohive</option>
+		<option>Audiojungle</option>
+		<option>Graphicriver</option>
+		<option>Photodun</option>
+		<option>3Docean</option>
+	</select>
+	<p>This is dark theme of select style. You just need to write dark in theme option.<br><br></p>
+</section>
+
+<div class="documentation">
+	<h1>Documentation</h1>
+	<p>The following options are available for select tag:</p>
+	<pre>
+		theme = <span class="pre-keyword">google</span>
+		<span class="pre-comment">Theme for different color</span>
+
+		width = <span class="pre-keyword">250</span>
+		<span class="pre-comment">Width of selector</span>
+
+		placeholder = <span class="pre-keyword">null</span>
+		<span class="pre-comment">Placeholder of selector for first time.</span>
+
+		data-search = <span class="pre-keyword">true</span>
+		<span class="pre-comment">Search bar of selector.</span><!--
+
+		 onChange : <span class="pre-function"><span class="pre-keyword">function</span><span class="pre-params">( val )</span> </span>{ <span class="pre-keyword">return</span> <span class="pre-keyword">false</span>; }
+		<span class="pre-comment">// callback when changing the value</span> 
+		-->
+	</pre>
+
+	<p class="secound">The following options are available for options:</p>
+	<pre>
+		font-family : <span class="pre-keyword">null</span>
+		<span class="pre-comment">Font Family of selected option</span>
+
+		data-image : <span class="pre-keyword">null</span>
+		<span class="pre-comment">Image of selected option.(max width and height is 16px)</span>
+	</pre>
+
+	<p class="secound">Let’s take a look at our custom select script. Having a select element like the following</p>
+	<pre>
+	<span class="pre-tag">&#60;select</span> <span class="pre-attribute">id</span>=<span class="pre-value">"myselectid"</span> <span class="pre-attribute">theme</span>=<span class="pre-value">"google"</span> <span class="pre-attribute">width</span>=<span class="pre-value">"250"</span> <span class="pre-attribute">style</span>=<span class="pre-value">""</span> <span class="pre-attribute">placeholder</span>=<span class="pre-value">"Select Your Favorite"</span><span class="pre-tag">></span>
+		<span class="pre-tag">&#60;option></span>Themeforest<span class="pre-tag">&#60;/option</span><span class="pre-tag">></span>
+		<span class="pre-tag">&#60;option</span>>Codecanyon<span class="pre-tag">&#60;/option</span><span class="pre-tag">></span>
+		<span class="pre-tag">&#60;option</span>>Videohive<span class="pre-tag">&#60;/option</span><span class="pre-tag">></span>
+	<span class="pre-tag">&#60;/select</span><span class="pre-tag">></span>
+	</pre>
+
+	<p class="secound">we’ll transform it into this structure:</p>
+	<pre>
+	<span class="pre-tag">&#60;div</span> <span class="pre-attribute">class</span>=<span class="pre-value">"selectstyle ss_dib google"</span> <span class="pre-attribute">style</span>=<span class="pre-value">"width:260px;"</span><span class="pre-tag">></span>
+		<span class="pre-tag">&#60;div</span> <span class="pre-attribute">id</span>=<span class="pre-value">"select_style"</span> <span class="pre-attribute">class</span>=<span class="pre-value">"ssbutton"</span> <span class="pre-attribute">style</span>=<span class="pre-value">"width:260px;"</span><span class="pre-tag">></span>
+			<span class="pre-tag">&#60;div</span> <span class="pre-attribute">class</span>=<span class="pre-value">"ss_dib"</span> <span class="pre-attribute">id</span>=<span class="pre-value">"select_style_text"</span> <span class="pre-attribute">style</span>=<span class="pre-value">"width:240px;"</span><span class="pre-tag">></span>Select Your Favorite<span class="pre-tag">&#60;/div</span><span class="pre-tag">></span>
+			<span class="pre-tag">&#60;div</span> <span class="pre-attribute">class</span>=<span class="pre-value">"ss_dib ss_image"</span>><span class="pre-tag">&#60;/div</span><span class="pre-tag">></span>
+		<span class="pre-tag">&#60;/div</span><span class="pre-tag">></span>
+		<span class="pre-tag">&#60;ul</span> <span class="pre-attribute">id</span>=<span class="pre-value">"select_style_ul"</span> <span class="pre-attribute">sid</span>=<span class="pre-value">"myselectid"</span> <span class="pre-attribute">style</span>=<span class="pre-value">""</span> <span class="pre-attribute">class</span>=<span class="pre-value">"ss_ul"</span><span class="pre-tag">></span>
+			<span class="pre-tag">&#60;li</span> <span class="pre-attribute">data-title</span>=<span class="pre-value">"Themeforest"</span> <span class="pre-attribute">value</span>=<span class="pre-value">"Themeforest"</span><span class="pre-tag">></span>Themeforest<span class="pre-tag">&#60;li</span><span class="pre-tag">></span>
+			<span class="pre-tag">&#60;li</span> <span class="pre-attribute">data-title</span>=<span class="pre-value">"Codecanyon"</span> <span class="pre-attribute">value</span>=<span class="pre-value">"Codecanyon"</span><span class="pre-tag">></span>Codecanyon<span class="pre-tag">&#60;li</span><span class="pre-tag">></span>
+			<span class="pre-tag">&#60;li</span> <span class="pre-attribute">data-title</span>=<span class="pre-value">"Videohive"</span> <span class="pre-attribute">value</span>=<span class="pre-value">"Videohive"</span><span class="pre-tag">></span>Videohive<span class="pre-tag">&#60;li</span><span class="pre-tag">></span>
+		<span class="pre-tag">&#60;/ul</span><span class="pre-tag">></span>
+	<span class="pre-tag">&#60;/div</span><span class="pre-tag">></span>
+	</pre>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$('select').selectstyle({
+		width  : 250,
+		height : 300,
+		theme  : 'light',
+		onchange : function(val){}
+	});
+});
+</script>
+</body>
+</html>
