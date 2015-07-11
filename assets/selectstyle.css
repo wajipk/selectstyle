@@ -13,6 +13,9 @@
 .ss_ulsearch .nosearch{text-align:center;font-size:12px;padding-bottom:10px;background:#fff;}
 .ss_ul li{padding:10px 15px;cursor:pointer;border:none;text-align:left;color:#595959;transition-duration:.3s;-moz-transition-duration:.3s;-webkit-transition-duration:.3s;-o-transition-duration:.3s;font-size:14px;}
 .ss_ul li:hover{border:none;background:#eee;}
+.ss_ul li .ssli_text{vertical-align:top;display:inline-block;}
+.ss_ul li .ssli_image{display:inline-block;width:16px;height:16px;margin-right:10px;margin-top:-1px;vertical-align:top;}
+.ss_ul li .ssli_image img{width:16px;height:16px;}
 .ss_ul::-webkit-scrollbar {width:10px;}
 .ss_ul::-webkit-scrollbar:horizontal{height:10px;}
 .ss_ul::-webkit-scrollbar-track {border-left:1px solid #D3D3D3;background:#F5F5F5;}

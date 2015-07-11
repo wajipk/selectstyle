@@ -26,6 +26,7 @@
 			$this.find('option').each(function (e) {
 				var $this_a = $(this),
 					val = $this_a.val(),
+					image = $this_a.attr('data-image'),
 					text = $this_a.html();
 				if(val == null){
 					val = text;
@@ -34,7 +35,11 @@
 				if($this_a.attr('font-family') != null){
 					html_op += ' style="font-family'+$this_a.attr('font-family')+'"';
 				}
-				html_op += '>'+text+'</li>';
+				html_op += '>';
+				if(image != null){
+					html_op += '<div class="ssli_image"><img src="'+image+'"></div>';
+				}
+				html_op += '<div class="ssli_text">'+text+'</div></li>';
 			});
 			$this.hide();
 
